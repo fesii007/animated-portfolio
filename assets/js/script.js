@@ -325,7 +325,7 @@ function initializeCursor() {
 
 // ===== NAVIGATION =====
 function initializeNavigation() {
-    const nav = document.querySelector('.nav');
+    const nav = document.querySelector('.navbar');
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -353,6 +353,13 @@ function initializeNavigation() {
             nav.classList.remove('nav-scrolled');
         }
     });
+
+    // Mobile navigation toggle
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav-open');
+        });
+    }
 }
 
 // ===== ANIMATIONS =====
@@ -370,8 +377,42 @@ function initializeAnimations() {
         });
     }, observerOptions);
     
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right');
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .reveal-text .title-text');
     animatedElements.forEach(el => observer.observe(el));
+}
+
+// ===== COUNTERS =====
+function initializeCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.dataset.count);
+                let current = 0;
+                const increment = target / 100;
+
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        entry.target.textContent = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        entry.target.textContent = target;
+                        observer.unobserve(entry.target);
+                    }
+                };
+                updateCounter();
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
 }
 
 // ===== PORTFOLIO =====
@@ -411,136 +452,158 @@ function renderPortfolio(limit = 3) {
             </div>
         </div>
     `).join('');
+
+    // Update expand button visibility and text
+    const expandBtn = document.querySelector('.portfolio-expand-btn');
+    if (expandBtn) {
+        if (filteredItems.length <= limit) {
+            expandBtn.style.display = 'none';
+        } else {
+            expandBtn.style.display = 'block';
+            const btnText = expandBtn.querySelector('.btn-text');
+            const btnIcon = expandBtn.querySelector('.btn-icon');
+            
+            if (portfolioExpanded) {
+                btnText.textContent = 'Show Less Projects';
+                btnIcon.className = 'fas fa-chevron-up btn-icon';
+            } else {
+                btnText.textContent = 'Show More Projects';
+                btnIcon.className = 'fas fa-chevron-down btn-icon';
+            }
+        }
+    }
 }
 
 function setupPortfolioFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
+            // Update active filter
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
+            // Update current filter
             currentFilter = btn.dataset.filter;
-            renderPortfolio(portfolioExpanded ? null : 3);
+            portfolioExpanded = false;
+            
+            // Re-render portfolio
+            renderPortfolio();
         });
     });
 }
 
 function setupPortfolioExpand() {
     const expandBtn = document.querySelector('.portfolio-expand-btn');
-    if (!expandBtn) return;
-    
-    expandBtn.addEventListener('click', () => {
-        portfolioExpanded = !portfolioExpanded;
-        renderPortfolio(portfolioExpanded ? null : 3);
-        expandBtn.textContent = portfolioExpanded ? 'Show Less Projects' : 'Show More Projects';
-    });
+    if (expandBtn) {
+        expandBtn.addEventListener('click', () => {
+            portfolioExpanded = !portfolioExpanded;
+            
+            if (portfolioExpanded) {
+                renderPortfolio(null); // Show all items
+            } else {
+                renderPortfolio(3); // Show only 3 items
+            }
+        });
+    }
 }
 
 // ===== TESTIMONIALS =====
 function initializeTestimonials() {
-    renderTestimonials();
     setupTestimonialsExpand();
-}
-
-function renderTestimonials(limit = 3) {
-    const testimonialsGrid = document.querySelector('.testimonials-grid');
-    if (!testimonialsGrid) return;
-    
-    const itemsToShow = limit ? testimonialItems.slice(0, limit) : testimonialItems;
-    
-    testimonialsGrid.innerHTML = itemsToShow.map(item => `
-        <div class="testimonial-item">
-            <div class="testimonial-video">
-                <iframe src="${item.video}" frameborder="0" allowfullscreen></iframe>
-                <div class="testimonial-overlay">
-                    <div class="testimonial-content">
-                        <div class="testimonial-rating">
-                            ${'★'.repeat(item.rating)}
-                        </div>
-                        <p>"${item.text}"</p>
-                        <div class="testimonial-author">
-                            <strong>${item.name}</strong>
-                            <span>${item.company}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `).join('');
 }
 
 function setupTestimonialsExpand() {
     const expandBtn = document.querySelector('.testimonials-expand-btn');
-    if (!expandBtn) return;
+    const hiddenTestimonials = document.querySelectorAll('.testimonial-hidden');
     
-    expandBtn.addEventListener('click', () => {
-        testimonialsExpanded = !testimonialsExpanded;
-        renderTestimonials(testimonialsExpanded ? null : 3);
-        expandBtn.textContent = testimonialsExpanded ? 'Show Less Testimonials' : 'Show More Testimonials';
-    });
+    if (expandBtn && hiddenTestimonials.length > 0) {
+        expandBtn.addEventListener('click', () => {
+            testimonialsExpanded = !testimonialsExpanded;
+            
+            const btnText = expandBtn.querySelector('.btn-text');
+            const btnIcon = expandBtn.querySelector('.btn-icon');
+            
+            if (testimonialsExpanded) {
+                // Show hidden testimonials
+                hiddenTestimonials.forEach((testimonial, index) => {
+                    setTimeout(() => {
+                        testimonial.style.display = 'block';
+                        testimonial.classList.remove('testimonial-hidden');
+                        testimonial.classList.add('testimonial-visible');
+                    }, index * 100);
+                });
+                
+                btnText.textContent = 'Show Less Testimonials';
+                btnIcon.className = 'fas fa-chevron-up btn-icon';
+            } else {
+                // Hide testimonials
+                hiddenTestimonials.forEach(testimonial => {
+                    testimonial.style.display = 'none';
+                    testimonial.classList.add('testimonial-hidden');
+                    testimonial.classList.remove('testimonial-visible');
+                });
+                
+                btnText.textContent = 'Show More Testimonials';
+                btnIcon.className = 'fas fa-chevron-down btn-icon';
+            }
+        });
+    }
 }
 
 // ===== SKILLS =====
 function initializeSkills() {
     const skillBars = document.querySelectorAll('.skill-progress');
-    const radarChart = document.querySelector('.radar-chart');
+    const radarChart = document.querySelector('#skillsRadarChart');
+    
+    // Animate skill bars when they come into view
+    const observerOptions = {
+        threshold: 0.5
+    };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('skill-progress')) {
-                    animateSkillBar(entry.target);
-                } else if (entry.target.classList.contains('radar-chart')) {
-                    animateRadarChart(entry.target);
+                const skillBar = entry.target;
+                const percentage = skillBar.dataset.skill;
+                const progressBar = skillBar.querySelector('.progress-bar');
+                
+                if (progressBar) {
+                    setTimeout(() => {
+                        progressBar.style.width = percentage + '%';
+                    }, 200);
                 }
+                
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, observerOptions);
     
-    skillBars.forEach(bar => observer.observe(bar));
-    if (radarChart) observer.observe(radarChart);
-}
-
-function animateSkillBar(skillBar) {
-    const percentage = skillBar.dataset.percentage;
-    const progressFill = skillBar.querySelector('.skill-fill');
-    const percentageText = skillBar.querySelector('.skill-percentage');
+    skillBars.forEach(skillBar => {
+        observer.observe(skillBar);
+    });
     
-    if (progressFill && percentageText) {
-        let currentPercentage = 0;
-        const increment = percentage / 100;
-        
-        const animation = setInterval(() => {
-            currentPercentage += increment;
-            if (currentPercentage >= percentage) {
-                currentPercentage = percentage;
-                clearInterval(animation);
-            }
-            
-            progressFill.style.width = currentPercentage + '%';
-            percentageText.textContent = Math.round(currentPercentage) + '%';
-        }, 20);
+    // Initialize radar chart if canvas exists
+    if (radarChart) {
+        initializeRadarChart();
     }
 }
 
-function animateRadarChart(radarChart) {
-    const canvas = radarChart.querySelector('canvas');
+function initializeRadarChart() {
+    const canvas = document.getElementById('skillsRadarChart');
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
-    const radius = Math.min(centerX, centerY) - 20;
+    const radius = Math.min(centerX, centerY) - 40;
     
     const skills = [
         { name: 'Video Editing', value: 98 },
-        { name: 'Web Development', value: 92 },
-        { name: 'Branding', value: 88 },
-        { name: 'UI/UX Design', value: 85 },
-        { name: 'Motion Graphics', value: 90 },
-        { name: 'Photography', value: 82 }
+        { name: 'Web Design', value: 95 },
+        { name: 'Branding', value: 90 },
+        { name: 'Motion Graphics', value: 85 },
+        { name: 'UI/UX', value: 88 },
+        { name: 'Photography', value: 80 }
     ];
     
     const angleStep = (Math.PI * 2) / skills.length;
@@ -548,8 +611,8 @@ function animateRadarChart(radarChart) {
     // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Draw grid
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    // Draw grid lines
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
     ctx.lineWidth = 1;
     
     for (let i = 1; i <= 5; i++) {
@@ -558,9 +621,9 @@ function animateRadarChart(radarChart) {
         ctx.stroke();
     }
     
-    // Draw axes
-    skills.forEach((_, index) => {
-        const angle = angleStep * index - Math.PI / 2;
+    // Draw axis lines
+    for (let i = 0; i < skills.length; i++) {
+        const angle = i * angleStep - Math.PI / 2;
         const x = centerX + Math.cos(angle) * radius;
         const y = centerY + Math.sin(angle) * radius;
         
@@ -568,103 +631,72 @@ function animateRadarChart(radarChart) {
         ctx.moveTo(centerX, centerY);
         ctx.lineTo(x, y);
         ctx.stroke();
-    });
+    }
     
-    // Draw skill polygon
-    ctx.strokeStyle = '#00d4ff';
-    ctx.fillStyle = 'rgba(0, 212, 255, 0.2)';
+    // Draw skill data
+    ctx.fillStyle = 'rgba(0, 212, 255, 0.3)';
+    ctx.strokeStyle = '#00D4FF';
     ctx.lineWidth = 2;
     
     ctx.beginPath();
-    skills.forEach((skill, index) => {
-        const angle = angleStep * index - Math.PI / 2;
-        const value = (skill.value / 100) * radius;
+    for (let i = 0; i < skills.length; i++) {
+        const angle = i * angleStep - Math.PI / 2;
+        const value = (skills[i].value / 100) * radius;
         const x = centerX + Math.cos(angle) * value;
         const y = centerY + Math.sin(angle) * value;
         
-        if (index === 0) {
+        if (i === 0) {
             ctx.moveTo(x, y);
         } else {
             ctx.lineTo(x, y);
         }
-    });
+    }
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
     
     // Draw skill points
-    ctx.fillStyle = '#00d4ff';
-    skills.forEach((skill, index) => {
-        const angle = angleStep * index - Math.PI / 2;
-        const value = (skill.value / 100) * radius;
+    ctx.fillStyle = '#00D4FF';
+    for (let i = 0; i < skills.length; i++) {
+        const angle = i * angleStep - Math.PI / 2;
+        const value = (skills[i].value / 100) * radius;
         const x = centerX + Math.cos(angle) * value;
         const y = centerY + Math.sin(angle) * value;
         
         ctx.beginPath();
         ctx.arc(x, y, 4, 0, Math.PI * 2);
         ctx.fill();
-    });
+    }
     
-    // Draw labels
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '12px Arial';
+    // Draw skill labels
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '12px Inter';
     ctx.textAlign = 'center';
     
-    skills.forEach((skill, index) => {
-        const angle = angleStep * index - Math.PI / 2;
-        const labelRadius = radius + 15;
+    for (let i = 0; i < skills.length; i++) {
+        const angle = i * angleStep - Math.PI / 2;
+        const labelRadius = radius + 20;
         const x = centerX + Math.cos(angle) * labelRadius;
         const y = centerY + Math.sin(angle) * labelRadius;
         
-        ctx.fillText(skill.name, x, y);
-    });
-}
-
-// ===== COUNTERS =====
-function initializeCounters() {
-    const counters = document.querySelectorAll('.counter-number');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    counters.forEach(counter => observer.observe(counter));
-}
-
-function animateCounter(counter) {
-    const target = parseInt(counter.dataset.count);
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
-        }
-        counter.textContent = Math.floor(current);
-    }, 16);
+        ctx.fillText(skills[i].name, x, y);
+    }
 }
 
 // ===== CONTACT FORM =====
 function initializeContactForm() {
-    const form = document.querySelector('.contact-form');
-    if (!form) return;
+    const contactForm = document.querySelector('.contact-form');
+    if (!contactForm) return;
     
-    form.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const formData = new FormData(form);
+        // Get form data
+        const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
         
         // Simulate form submission
-        const submitBtn = form.querySelector('.submit-btn');
+        const submitBtn = contactForm.querySelector('.btn-primary');
         const originalText = submitBtn.textContent;
         
         submitBtn.textContent = 'Sending...';
@@ -672,95 +704,152 @@ function initializeContactForm() {
         
         setTimeout(() => {
             submitBtn.textContent = 'Message Sent!';
-            form.reset();
-            
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
+                contactForm.reset();
             }, 2000);
-        }, 1000);
+        }, 1500);
     });
 }
 
 // ===== PARTICLES =====
 function initializeParticles() {
-    const canvas = document.querySelector('.particles-canvas');
-    if (!canvas) return;
+    const particleContainer = document.querySelector('.particle-network');
+    if (!particleContainer) return;
     
-    const ctx = canvas.getContext('2d');
-    let particles = [];
+    const particles = [];
+    const particleCount = 50;
     
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    
-    function createParticle() {
-        return {
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
+    // Create particles
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(0, 212, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+        `;
+        
+        particleContainer.appendChild(particle);
+        
+        particles.push({
+            element: particle,
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
             vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
-            size: Math.random() * 2 + 1,
-            opacity: Math.random() * 0.5 + 0.2
-        };
+            vy: (Math.random() - 0.5) * 0.5
+        });
     }
     
-    function initParticles() {
-        particles = [];
-        for (let i = 0; i < 50; i++) {
-            particles.push(createParticle());
-        }
-    }
-    
-    function updateParticles() {
+    // Animate particles
+    function animateParticles() {
         particles.forEach(particle => {
             particle.x += particle.vx;
             particle.y += particle.vy;
             
-            if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-            if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+            // Wrap around screen
+            if (particle.x < 0) particle.x = window.innerWidth;
+            if (particle.x > window.innerWidth) particle.x = 0;
+            if (particle.y < 0) particle.y = window.innerHeight;
+            if (particle.y > window.innerHeight) particle.y = 0;
+            
+            particle.element.style.left = particle.x + 'px';
+            particle.element.style.top = particle.y + 'px';
         });
-    }
-    
-    function drawParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
         
-        particles.forEach(particle => {
-            ctx.beginPath();
-            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0, 212, 255, ${particle.opacity})`;
-            ctx.fill();
-        });
+        requestAnimationFrame(animateParticles);
     }
     
-    function animate() {
-        updateParticles();
-        drawParticles();
-        requestAnimationFrame(animate);
-    }
-    
-    resizeCanvas();
-    initParticles();
-    animate();
-    
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-        initParticles();
-    });
+    animateParticles();
 }
 
 // ===== SCROLL EFFECTS =====
 function initializeScrollEffects() {
-    const parallaxElements = document.querySelectorAll('.parallax');
+    let ticking = false;
     
-    window.addEventListener('scroll', () => {
+    function updateScrollEffects() {
         const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
         
-        parallaxElements.forEach(element => {
-            const rate = scrolled * -0.5;
-            element.style.transform = `translateY(${rate}px)`;
-        });
-    });
+        // Parallax effect for hero background
+        const heroVideo = document.querySelector('.hero-video');
+        if (heroVideo) {
+            heroVideo.style.transform = `translateY(${rate}px)`;
+        }
+        
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollEffects);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick);
 }
+
+// ===== MAGNETIC BUTTONS =====
+document.addEventListener('mousemove', (e) => {
+    const magneticElements = document.querySelectorAll('.magnetic');
+    
+    magneticElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const distance = Math.sqrt(x * x + y * y);
+        
+        if (distance < 100) {
+            const strength = (100 - distance) / 100;
+            const moveX = x * strength * 0.3;
+            const moveY = y * strength * 0.3;
+            
+            element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        } else {
+            element.style.transform = 'translate(0, 0)';
+        }
+    });
+});
+
+// ===== MOBILE OPTIMIZATIONS =====
+if (window.innerWidth <= 768) {
+    // Disable custom cursor on mobile
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+    if (cursor) cursor.style.display = 'none';
+    if (cursorFollower) cursorFollower.style.display = 'none';
+    
+    // Reduce particle count on mobile
+    const particleContainer = document.querySelector('.particle-network');
+    if (particleContainer) {
+        particleContainer.style.display = 'none';
+    }
+}
+
+// ===== UTILITY FUNCTIONS =====
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// ===== RESIZE HANDLER =====
+window.addEventListener('resize', debounce(() => {
+    // Reinitialize radar chart on resize
+    const radarChart = document.querySelector('#skillsRadarChart');
+    if (radarChart) {
+        initializeRadarChart();
+    }
+}, 250));
 
