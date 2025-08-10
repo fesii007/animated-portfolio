@@ -509,42 +509,64 @@ function setupPortfolioExpand() {
 
 // ===== TESTIMONIALS =====
 function initializeTestimonials() {
+    renderTestimonials();
     setupTestimonialsExpand();
 }
 
-function setupTestimonialsExpand() {
+function renderTestimonials(limit = 3) {
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    if (!testimonialsGrid) return;
+
+    const itemsToShow = limit ? testimonialItems.slice(0, limit) : testimonialItems;
+
+    testimonialsGrid.innerHTML = itemsToShow.map(item => `
+        <div class="testimonial-card glass-card">
+            <div class="testimonial-video-container">
+                <iframe src="${item.video}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="testimonial-content">
+                <div class="stars">
+                    ${'<i class="fas fa-star"></i>'.repeat(item.rating)}
+                </div>
+                <p class="testimonial-text">"${item.text}"</p>
+                <div class="testimonial-author">
+                    <h4 class="author-name">${item.name}</h4>
+                    <p class="author-company">${item.company}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
     const expandBtn = document.querySelector('.testimonials-expand-btn');
-    const hiddenTestimonials = document.querySelectorAll('.testimonial-hidden');
-    
-    if (expandBtn && hiddenTestimonials.length > 0) {
-        expandBtn.addEventListener('click', () => {
-            testimonialsExpanded = !testimonialsExpanded;
-            
+    if (expandBtn) {
+        if (testimonialItems.length <= limit) {
+            expandBtn.style.display = 'none';
+        } else {
+            expandBtn.style.display = 'block';
             const btnText = expandBtn.querySelector('.btn-text');
             const btnIcon = expandBtn.querySelector('.btn-icon');
             
             if (testimonialsExpanded) {
-                // Show hidden testimonials
-                hiddenTestimonials.forEach((testimonial, index) => {
-                    setTimeout(() => {
-                        testimonial.style.display = 'block';
-                        testimonial.classList.remove('testimonial-hidden');
-                        testimonial.classList.add('testimonial-visible');
-                    }, index * 100);
-                });
-                
                 btnText.textContent = 'Show Less Testimonials';
                 btnIcon.className = 'fas fa-chevron-up btn-icon';
             } else {
-                // Hide testimonials
-                hiddenTestimonials.forEach(testimonial => {
-                    testimonial.style.display = 'none';
-                    testimonial.classList.add('testimonial-hidden');
-                    testimonial.classList.remove('testimonial-visible');
-                });
-                
                 btnText.textContent = 'Show More Testimonials';
                 btnIcon.className = 'fas fa-chevron-down btn-icon';
+            }
+        }
+    }
+}
+
+function setupTestimonialsExpand() {
+    const expandBtn = document.querySelector('.testimonials-expand-btn');
+    if (expandBtn) {
+        expandBtn.addEventListener('click', () => {
+            testimonialsExpanded = !testimonialsExpanded;
+            
+            if (testimonialsExpanded) {
+                renderTestimonials(null); // Show all items
+            } else {
+                renderTestimonials(3); // Show only 3 items
             }
         });
     }
@@ -564,7 +586,7 @@ function initializeSkills() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const skillBar = entry.target;
-                const percentage = skillBar.dataset.skill;
+                const percentage = skillBar.dataset.width;
                 const progressBar = skillBar.querySelector('.progress-bar');
                 
                 if (progressBar) {
