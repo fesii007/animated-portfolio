@@ -25,6 +25,9 @@
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
+    <!-- Chart.js for Skills Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -32,8 +35,6 @@
     <!-- Custom Cursor -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-
-
 
     <!-- Animated Background -->
     <div class="animated-background">
@@ -80,6 +81,10 @@
                 </a>
                 <a href="#testimonials" class="nav-link" data-section="testimonials">
                     <span class="nav-text">Reviews</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#platforms" class="nav-link" data-section="platforms">
+                    <span class="nav-text">Platforms</span>
                     <div class="nav-indicator"></div>
                 </a>
                 <a href="#contact" class="nav-link" data-section="contact">
@@ -329,28 +334,18 @@
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Audio Synchronization</span>
+                            <span>Audio Enhancement</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Custom Transitions</span>
+                            <span>Storytelling & Pacing</span>
                         </div>
                     </div>
                     <div class="service-tools">
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="After Effects">
-                        </div>
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere Pro">
-                        </div>
-                        <div class="tool-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/DaVinci_Resolve_17_logo.svg" alt="DaVinci Resolve">
-                        </div>
+                        <span class="tool">Premiere Pro</span>
+                        <span class="tool">After Effects</span>
+                        <span class="tool">DaVinci Resolve</span>
                     </div>
-                    <button class="service-btn">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
                 </div>
 
                 <div class="service-card glass-card">
@@ -358,10 +353,10 @@
                         <i class="fas fa-code"></i>
                         <div class="icon-particles"></div>
                     </div>
-                    <h3 class="service-title">Web Design</h3>
+                    <h3 class="service-title">Web Development</h3>
                     <p class="service-description">
-                        Modern, responsive websites that convert visitors into customers. 
-                        Specialized in user experience design and cutting-edge web technologies.
+                        Modern, responsive websites and web applications built with the latest technologies. 
+                        Focus on performance, user experience, and conversion optimization.
                     </p>
                     <div class="service-features">
                         <div class="feature-item">
@@ -370,32 +365,22 @@
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>UI/UX Optimization</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>SEO Implementation</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
                             <span>E-commerce Solutions</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>SEO Optimization</span>
-                        </div>
                     </div>
                     <div class="service-tools">
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                        </div>
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        </div>
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-                        </div>
+                        <span class="tool">React</span>
+                        <span class="tool">Next.js</span>
+                        <span class="tool">WordPress</span>
                     </div>
-                    <button class="service-btn">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
                 </div>
 
                 <div class="service-card glass-card">
@@ -403,15 +388,15 @@
                         <i class="fas fa-palette"></i>
                         <div class="icon-particles"></div>
                     </div>
-                    <h3 class="service-title">Brand Identity</h3>
+                    <h3 class="service-title">Brand Design</h3>
                     <p class="service-description">
-                        Complete brand identity design including logos, color schemes, typography, 
-                        and brand guidelines for consistent visual communication.
+                        Complete brand identity solutions including logo design, brand guidelines, 
+                        and marketing materials that make your business stand out.
                     </p>
                     <div class="service-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Logo Design</span>
+                            <span>Logo & Identity Design</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
@@ -423,24 +408,14 @@
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Social Media Assets</span>
+                            <span>Print & Digital Assets</span>
                         </div>
                     </div>
                     <div class="service-tools">
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
-                        </div>
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator">
-                        </div>
-                        <div class="tool-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
-                        </div>
+                        <span class="tool">Illustrator</span>
+                        <span class="tool">Photoshop</span>
+                        <span class="tool">Figma</span>
                     </div>
-                    <button class="service-btn">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
                 </div>
             </div>
         </div>
@@ -462,343 +437,13 @@
                 <button class="filter-btn" data-filter="video">Video Editing</button>
                 <button class="filter-btn" data-filter="web">Web Design</button>
                 <button class="filter-btn" data-filter="brand">Branding</button>
-                  <div class="portfolio-grid" id="portfolioGrid">
-                <!-- Portfolio items will be loaded here by JavaScript -->
-            </div>
-            <div class="portfolio-actions-bottom">
-                <button class="btn btn-primary magnetic" id="showMorePortfolioBtn">
-                    <span class="btn-text">Show More Projects</span>
-                    <div class="btn-particles"></div>
-                    <i class="fas fa-plus btn-icon"></i>
-                </button>
-            </div>rtfolio-item glass-card portfolio-embed" data-category="video">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Video Editing</span>
-                                <h3 class="portfolio-title">Corporate Video Campaign</h3>
-                                <p class="portfolio-desc">Complete video production for tech startup launch</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">After Effects</span>
-                                    <span class="tag">Premiere Pro</span>
-                                    <span class="tag">Color Grading</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed" data-category="web">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Web Design</span>
-                                <h3 class="portfolio-title">E-commerce Website</h3>
-                                <p class="portfolio-desc">Modern online store with seamless user experience</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">React</span>
-                                    <span class="tag">Tailwind</span>
-                                    <span class="tag">Stripe Integration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed" data-category="brand">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Branding</span>
-                                <h3 class="portfolio-title">Brand Identity Design</h3>
-                                <p class="portfolio-desc">Complete brand identity for luxury fashion brand</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Logo Design</span>
-                                    <span class="tag">Brand Guidelines</span>
-                                    <span class="tag">Print Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hidden items that will be revealed on expand -->
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="video">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Video Editing</span>
-                                <h3 class="portfolio-title">YouTube Channel Branding</h3>
-                                <p class="portfolio-desc">Complete visual identity and video templates</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Motion Graphics</span>
-                                    <span class="tag">Branding</span>
-                                    <span class="tag">Templates</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="web">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Web Design</span>
-                                <h3 class="portfolio-title">SaaS Landing Page</h3>
-                                <p class="portfolio-desc">High-converting landing page for software company</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Next.js</span>
-                                    <span class="tag">Framer Motion</span>
-                                    <span class="tag">Analytics</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="brand">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Branding</span>
-                                <h3 class="portfolio-title">Restaurant Branding</h3>
-                                <p class="portfolio-desc">Complete brand identity for fine dining restaurant</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Logo Design</span>
-                                    <span class="tag">Menu Design</span>
-                                    <span class="tag">Packaging</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional hidden portfolio items (7-20) -->
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="video">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Video Editing</span>
-                                <h3 class="portfolio-title">Music Video Production</h3>
-                                <p class="portfolio-desc">Creative music video with stunning visual effects</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Creative Direction</span>
-                                    <span class="tag">VFX</span>
-                                    <span class="tag">Color Grading</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="web">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Web Design</span>
-                                <h3 class="portfolio-title">Portfolio Website</h3>
-                                <p class="portfolio-desc">Creative portfolio with interactive animations</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Three.js</span>
-                                    <span class="tag">GSAP</span>
-                                    <span class="tag">WebGL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="brand">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Branding</span>
-                                <h3 class="portfolio-title">Tech Startup Branding</h3>
-                                <p class="portfolio-desc">Modern brand identity for innovative tech company</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Logo Design</span>
-                                    <span class="tag">Brand Strategy</span>
-                                    <span class="tag">Digital Assets</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="video">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Video Editing</span>
-                                <h3 class="portfolio-title">Documentary Film</h3>
-                                <p class="portfolio-desc">Award-winning documentary with compelling storytelling</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Documentary</span>
-                                    <span class="tag">Storytelling</span>
-                                    <span class="tag">Sound Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="web">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Web Design</span>
-                                <h3 class="portfolio-title">Mobile App Landing</h3>
-                                <p class="portfolio-desc">Conversion-optimized landing page for mobile app</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Mobile First</span>
-                                    <span class="tag">Conversion</span>
-                                    <span class="tag">A/B Testing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="brand">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Branding</span>
-                                <h3 class="portfolio-title">Fashion Brand Identity</h3>
-                                <p class="portfolio-desc">Luxury fashion brand with elegant visual identity</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Luxury Branding</span>
-                                    <span class="tag">Fashion</span>
-                                    <span class="tag">Print Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="video">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Video Editing</span>
-                                <h3 class="portfolio-title">Commercial Advertisement</h3>
-                                <p class="portfolio-desc">High-impact commercial for global brand campaign</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Commercial</span>
-                                    <span class="tag">Brand Campaign</span>
-                                    <span class="tag">Motion Graphics</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="web">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Web Design</span>
-                                <h3 class="portfolio-title">Agency Website</h3>
-                                <p class="portfolio-desc">Creative agency website with stunning animations</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Creative Agency</span>
-                                    <span class="tag">Animations</span>
-                                    <span class="tag">Interactive</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="brand">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Branding</span>
-                                <h3 class="portfolio-title">Healthcare Branding</h3>
-                                <p class="portfolio-desc">Professional healthcare brand with trust-building design</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Healthcare</span>
-                                    <span class="tag">Professional</span>
-                                    <span class="tag">Trust Building</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="video">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Video Editing</span>
-                                <h3 class="portfolio-title">Event Highlight Reel</h3>
-                                <p class="portfolio-desc">Dynamic event coverage with cinematic storytelling</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Event Coverage</span>
-                                    <span class="tag">Cinematic</span>
-                                    <span class="tag">Highlight Reel</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="web">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Web Design</span>
-                                <h3 class="portfolio-title">Real Estate Platform</h3>
-                                <p class="portfolio-desc">Modern real estate platform with advanced search</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Real Estate</span>
-                                    <span class="tag">Search Platform</span>
-                                    <span class="tag">Property Listings</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item glass-card portfolio-embed portfolio-hidden" data-category="brand">
-                    <div class="portfolio-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-overlay">
-                            <div class="video-info">
-                                <span class="portfolio-category">Branding</span>
-                                <h3 class="portfolio-title">Sports Brand Identity</h3>
-                                <p class="portfolio-desc">Dynamic sports brand with energetic visual identity</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">Sports Branding</span>
-                                    <span class="tag">Dynamic Design</span>
-                                    <span class="tag">Athletic</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="portfolio-expand">
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be dynamically generated -->
+            </div>
+
+            <div class="portfolio-expand-container">
                 <button class="btn btn-outline portfolio-expand-btn" id="portfolioExpandBtn">
                     <span class="btn-text">Show More Projects</span>
                     <i class="fas fa-chevron-down btn-icon"></i>
@@ -819,109 +464,96 @@
             </div>
 
             <div class="skills-content">
-                <div class="skills-chart">
-                    <div class="radar-chart">
-                        <canvas id="skillsRadar" width="400" height="400"></canvas>
+                <div class="skills-bars">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Video Editing</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="98"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Motion Graphics</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Web Development</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">UI/UX Design</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Brand Design</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Color Grading</span>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="96"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skills-bars">
-                    <div class="skill-category">
-                        <h3>Video Editing</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Adobe Premiere Pro</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">After Effects</span>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">DaVinci Resolve</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="skills-chart">
+                    <div class="chart-container">
+                        <canvas id="skillsChart"></canvas>
                     </div>
-
-                    <div class="skill-category">
-                        <h3>Web Development</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML/CSS</span>
-                                    <span class="skill-percentage">98%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="98"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JavaScript</span>
-                                    <span class="skill-percentage">88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="88"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">React</span>
-                                    <span class="skill-percentage">82%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="82"></div>
-                                </div>
-                            </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #00D4FF;"></div>
+                            <span>Video Editing</span>
                         </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Design</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Photoshop</span>
-                                    <span class="skill-percentage">92%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="92"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Illustrator</span>
-                                    <span class="skill-percentage">87%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="87"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Figma</span>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90"></div>
-                                </div>
-                            </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #00FF88;"></div>
+                            <span>Motion Graphics</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #6B46C1;"></div>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #FF6B6B;"></div>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #FFD93D;"></div>
+                            <span>Brand Design</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #FF8C42;"></div>
+                            <span>Color Grading</span>
                         </div>
                     </div>
                 </div>
@@ -941,250 +573,10 @@
             </div>
 
             <div class="testimonials-grid" id="testimonialsGrid">
-                <!-- Initial 3 visible testimonial videos -->
-                <div class="testimonial-item glass-card testimonial-embed">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Sarah Johnson">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Sarah Johnson</h4>
-                                    <p class="client-position">Marketing Director at TechCorp</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Mike Chen">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Mike Chen</h4>
-                                    <p class="client-position">Startup Founder at InnovateLab</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Emma Rodriguez">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Emma Rodriguez</h4>
-                                    <p class="client-position">Content Creator at CreativeStudio</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hidden testimonial videos -->
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="David Wilson">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">David Wilson</h4>
-                                    <p class="client-position">Brand Manager at GlobalBrand</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Lisa Thompson">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Lisa Thompson</h4>
-                                    <p class="client-position">CEO at StartupHub</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Alex Johnson">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Alex Johnson</h4>
-                                    <p class="client-position">Creative Director at DesignCo</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" alt="Maria Garcia">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Maria Garcia</h4>
-                                    <p class="client-position">Marketing Manager at TechFlow</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" alt="James Brown">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">James Brown</h4>
-                                    <p class="client-position">Entrepreneur at VisionTech</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" alt="Rachel Kim">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Rachel Kim</h4>
-                                    <p class="client-position">Product Manager at InnovateCorp</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item glass-card testimonial-embed testimonial-hidden">
-                    <div class="testimonial-video">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        <div class="testimonial-overlay">
-                            <div class="testimonial-info">
-                                <div class="client-avatar">
-                                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" alt="Tom Anderson">
-                                </div>
-                                <div class="client-details">
-                                    <h4 class="client-name">Tom Anderson</h4>
-                                    <p class="client-position">Founder at CreativeWorks</p>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Testimonial items will be dynamically generated -->
             </div>
 
-            <div class="testimonials-expand">
+            <div class="testimonials-expand-container">
                 <button class="btn btn-outline testimonials-expand-btn" id="testimonialsExpandBtn">
                     <span class="btn-text">Show More Testimonials</span>
                     <i class="fas fa-chevron-down btn-icon"></i>
@@ -1201,181 +593,150 @@
                     <span class="title-number">06</span>
                     <span class="title-text">Freelance Platforms</span>
                 </h2>
-                <p class="section-subtitle">Trusted by Clients Worldwide</p>
+                <p class="section-subtitle">Where You Can Find Me</p>
             </div>
 
             <div class="platforms-content">
                 <div class="platform-profile">
                     <div class="profile-image-section">
-                        <div class="profile-image-container">
-                            <div class="profile-glow-platform"></div>
-                            <div class="profile-ring-platform"></div>
-                            <img src="assets/images/faisal_profile.jpeg" alt="Faisal Profile" class="profile-image-platform">
-                        </div>
-                        <div class="profile-badge">
-                            <i class="fas fa-certificate"></i>
-                            <span>Verified Professional</span>
-                        </div>
+                        <img src="assets/images/faisal_profile.jpeg" alt="Faisal Ahmed" class="platform-profile-image">
+                        <div class="profile-glow-effect"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Faisal Ahmed</h3>
+                        <p class="profile-title">Digital Craftsman & Creative Professional</p>
+                        <p class="profile-description">
+                            Specializing in video editing, web development, and brand design with over 5 years of experience 
+                            helping businesses and creators bring their visions to life.
+                        </p>
                     </div>
                 </div>
 
                 <div class="platforms-grid">
-                    <div class="platform-card glass-card fiverr-card">
+                    <div class="platform-card fiverr-card">
                         <div class="platform-header">
                             <div class="platform-logo">
-                                <i class="fab fa-creative-commons-sampling"></i>
+                                <i class="fab fa-fiverr"></i>
                             </div>
-                            <div class="platform-name">
-                                <h3>Fiverr</h3>
-                                <p class="platform-status">Top Rated Seller</p>
-                            </div>
+                            <h3 class="platform-name">Fiverr</h3>
+                            <div class="platform-badge">Level 2 Seller</div>
                         </div>
                         
                         <div class="platform-stats">
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-star"></i>
+                            <div class="stat-group">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">4.9</span>
+                                        <span class="stat-label">Rating</span>
+                                    </div>
                                 </div>
-                                <div class="stat-details">
-                                    <span class="stat-number">4.9</span>
-                                    <span class="stat-label">Rating</span>
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">1.3k</span>
+                                        <span class="stat-label">Reviews</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-number">1.3k</span>
-                                    <span class="stat-label">Reviews</span>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-number">Level 2</span>
-                                    <span class="stat-label">Seller</span>
+                            
+                            <div class="specialties">
+                                <h4>Specialties</h4>
+                                <div class="specialty-tags">
+                                    <span class="specialty-tag">Video Editing</span>
+                                    <span class="specialty-tag">Motion Graphics</span>
+                                    <span class="specialty-tag">YouTube Videos</span>
+                                    <span class="specialty-tag">Social Media</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="platform-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        <div class="platform-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Top Rated Seller</span>
                             </div>
-                            <span class="rating-text">Exceptional Quality</span>
+                            <div class="achievement-item">
+                                <i class="fas fa-clock"></i>
+                                <span>24h Response Time</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-redo"></i>
+                                <span>98% Order Completion</span>
+                            </div>
                         </div>
 
-                        <div class="platform-specialties">
-                            <span class="specialty-tag">Video Editing</span>
-                            <span class="specialty-tag">Motion Graphics</span>
-                            <span class="specialty-tag">Web Design</span>
-                        </div>
-
-                        <button class="platform-btn fiverr-btn">
-                            <span>Visit My Fiverr</span>
+                        <a href="#" class="platform-btn fiverr-btn">
+                            <span>Visit My Fiverr Profile</span>
                             <i class="fas fa-external-link-alt"></i>
-                        </button>
+                        </a>
                     </div>
 
-                    <div class="platform-card glass-card upwork-card">
+                    <div class="platform-card upwork-card">
                         <div class="platform-header">
                             <div class="platform-logo">
                                 <i class="fab fa-upwork"></i>
                             </div>
-                            <div class="platform-name">
-                                <h3>Upwork</h3>
-                                <p class="platform-status">Top Rated Plus</p>
-                            </div>
+                            <h3 class="platform-name">Upwork</h3>
+                            <div class="platform-badge">Rising Talent</div>
                         </div>
                         
                         <div class="platform-stats">
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-percentage"></i>
+                            <div class="stat-group">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">92%</span>
+                                        <span class="stat-label">Job Success</span>
+                                    </div>
                                 </div>
-                                <div class="stat-details">
-                                    <span class="stat-number">92%</span>
-                                    <span class="stat-label">JSS</span>
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <span class="stat-value">20+</span>
+                                        <span class="stat-label">Jobs</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-number">20+</span>
-                                    <span class="stat-label">Jobs</span>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-number">500+</span>
-                                    <span class="stat-label">Hours</span>
+                            
+                            <div class="specialties">
+                                <h4>Specialties</h4>
+                                <div class="specialty-tags">
+                                    <span class="specialty-tag">Web Development</span>
+                                    <span class="specialty-tag">Brand Design</span>
+                                    <span class="specialty-tag">UI/UX Design</span>
+                                    <span class="specialty-tag">WordPress</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="platform-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        <div class="platform-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-heart"></i>
+                                <span>100% Client Satisfaction</span>
                             </div>
-                            <span class="rating-text">100% Success Rate</span>
+                            <div class="achievement-item">
+                                <i class="fas fa-clock"></i>
+                                <span>On-Time Delivery</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Long-term Relationships</span>
+                            </div>
                         </div>
 
-                        <div class="platform-specialties">
-                            <span class="specialty-tag">Full Stack Dev</span>
-                            <span class="specialty-tag">Brand Design</span>
-                            <span class="specialty-tag">Consulting</span>
-                        </div>
-
-                        <button class="platform-btn upwork-btn">
-                            <span>Visit My Upwork</span>
+                        <a href="#" class="platform-btn upwork-btn">
+                            <span>Visit My Upwork Profile</span>
                             <i class="fas fa-external-link-alt"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="platforms-achievements">
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="achievement-text">
-                            <h4>Rising Talent</h4>
-                            <p>Recognized for exceptional work quality</p>
-                        </div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="achievement-text">
-                            <h4>Client Satisfaction</h4>
-                            <p>98% positive feedback rate</p>
-                        </div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="achievement-text">
-                            <h4>Fast Delivery</h4>
-                            <p>Always on time, often ahead of schedule</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1388,9 +749,9 @@
             <div class="section-header">
                 <h2 class="section-title reveal-text">
                     <span class="title-number">07</span>
-                    <span class="title-text">Contact</span>
+                    <span class="title-text">Get In Touch</span>
                 </h2>
-                <p class="section-subtitle">Let's Work Together</p>
+                <p class="section-subtitle">Let's Create Something Amazing Together</p>
             </div>
 
             <div class="contact-content">
@@ -1401,9 +762,10 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>faisal@digitalcraftsman.com</p>
+                            <p>faisal@example.com</p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
@@ -1413,6 +775,7 @@
                             <p>+1 (555) 123-4567</p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -1420,15 +783,6 @@
                         <div class="contact-details">
                             <h4>Location</h4>
                             <p>Available Worldwide</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Response Time</h4>
-                            <p>Within 24 hours</p>
                         </div>
                     </div>
 
@@ -1446,72 +800,34 @@
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
+                </div>
 
-                    <div class="platform-links">
-                        <a href="#" class="platform-link fiverr">
-                            <div class="platform-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="platform-info">
-                                <h4>Fiverr</h4>
-                                <p>Top Rated Seller</p>
-                                <div class="platform-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="rating">4.9/5</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="platform-link upwork">
-                            <div class="platform-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="platform-info">
-                                <h4>Upwork</h4>
-                                <p>Top Rated Plus</p>
-                                <div class="platform-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="rating">100% Success</span>
-                                </div>
-                            </div>
-                        </a>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
                     </div>
-                </div>
-
-                <div class="contact-form">
-                    <form class="form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-input" id="name" required>
-                            <label class="form-label" for="name">Your Name</label>
-                            <div class="form-line"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-input" id="email" required>
-                            <label class="form-label" for="email">Email Address</label>
-                            <div class="form-line"></div>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-input" id="service" required>
-                                <option value="">Select Service</option>
-                                <option value="video-editing">Video Editing</option>
-                                <option value="web-design">Web Design</option>
-                                <option value="brand-identity">Brand Identity</option>
-                                <option value="consultation">Consultation</option>
-                            </select>
-                            <label class="form-label" for="service">Service Needed</label>
-                            <div class="form-line"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-input" id="message" rows="5" required></textarea>
-                            <label class="form-label" for="message">Project Details</label>
-                            <div class="form-line"></div>
-                        </div>
-                        <button type="submit" class="form-submit">
-                            <span class="submit-text">Send Message</span>
-                            <div class="submit-particles"></div>
-                            <i class="fas fa-paper-plane submit-icon"></i>
-                        </button>
-                    </form>
-                </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -1520,125 +836,69 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <span class="logo-text gradient-text">FAISAL</span>
-                            <span class="logo-subtitle">Digital Craftsman</span>
-                        </div>
-                        <p class="footer-description">
-                            Transforming ideas into stunning digital experiences through innovative video editing, 
-                            web design, and brand identity solutions. Let's create something extraordinary together.
-                        </p>
-                        <div class="footer-social">
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Behance">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                        </div>
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text gradient-text">FAISAL</span>
+                        <span class="logo-subtitle">Digital Craftsman</span>
                     </div>
-
-                    <div class="footer-links">
-                        <div class="footer-column">
-                            <h4 class="footer-title">Services</h4>
-                            <ul class="footer-list">
-                                <li><a href="#services" class="footer-link">Video Editing</a></li>
-                                <li><a href="#services" class="footer-link">Web Design</a></li>
-                                <li><a href="#services" class="footer-link">Brand Identity</a></li>
-                                <li><a href="#services" class="footer-link">Motion Graphics</a></li>
-                                <li><a href="#services" class="footer-link">Consultation</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4 class="footer-title">Quick Links</h4>
-                            <ul class="footer-list">
-                                <li><a href="#about" class="footer-link">About Me</a></li>
-                                <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
-                                <li><a href="#skills" class="footer-link">Skills</a></li>
-                                <li><a href="#testimonials" class="footer-link">Testimonials</a></li>
-                                <li><a href="#contact" class="footer-link">Contact</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4 class="footer-title">Resources</h4>
-                            <ul class="footer-list">
-                                <li><a href="#" class="footer-link">Download Resume</a></li>
-                                <li><a href="#" class="footer-link">Portfolio PDF</a></li>
-                                <li><a href="#" class="footer-link">Case Studies</a></li>
-                                <li><a href="#" class="footer-link">Blog</a></li>
-                                <li><a href="#" class="footer-link">FAQ</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4 class="footer-title">Contact Info</h4>
-                            <div class="footer-contact">
-                                <div class="contact-item-footer">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>faisal@digitalcraftsman.com</span>
-                                </div>
-                                <div class="contact-item-footer">
-                                    <i class="fas fa-phone"></i>
-                                    <span>+1 (555) 123-4567</span>
-                                </div>
-                                <div class="contact-item-footer">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Available Worldwide</span>
-                                </div>
-                                <div class="contact-item-footer">
-                                    <i class="fas fa-clock"></i>
-                                    <span>24/7 Response</span>
-                                </div>
-                            </div>
-                        </div>
+                    <p class="footer-description">
+                        Creating stunning digital experiences through video editing, web development, and brand design.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="footer-platforms">
-                    <div class="platform-link-footer fiverr">
-                        <i class="fas fa-star"></i>
-                        <span>Fiverr - Top Rated Seller</span>
-                        <a href="#" class="platform-btn-footer">Visit Profile</a>
-                    </div>
-                    <div class="platform-link-footer upwork">
-                        <i class="fab fa-upwork"></i>
-                        <span>Upwork - Top Rated Plus</span>
-                        <a href="#" class="platform-btn-footer">Visit Profile</a>
-                    </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Video Editing</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Brand Design</a></li>
+                        <li><a href="#services">Motion Graphics</a></li>
+                    </ul>
                 </div>
 
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
-                        <p>&copy; 2024 Faisal Ahmed. All rights reserved. Crafting digital experiences with passion and precision.</p>
-                    </div>
-                    <div class="footer-legal">
-                        <a href="#" class="legal-link">Privacy Policy</a>
-                        <a href="#" class="legal-link">Terms of Service</a>
-                        <a href="#" class="legal-link">Cookie Policy</a>
-                    </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Download Resume</a></li>
+                        <li><a href="#">Portfolio PDF</a></li>
+                        <li><a href="#platforms">Fiverr Profile</a></li>
+                        <li><a href="#platforms">Upwork Profile</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-background">
-            <div class="footer-particles"></div>
-            <div class="footer-waves">
-                <div class="wave-footer wave-1"></div>
-                <div class="wave-footer wave-2"></div>
-                <div class="wave-footer wave-3"></div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Faisal Ahmed. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

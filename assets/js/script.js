@@ -17,7 +17,8 @@ let portfolioItems = [
         description: 'Modern online store with seamless user experience',
         image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
         tags: ['React', 'Tailwind', 'Stripe Integration'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 3,
@@ -25,7 +26,8 @@ let portfolioItems = [
         category: 'brand',
         description: 'Complete brand identity for luxury fashion brand',
         image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&h=300&fit=crop',
-        tags: ['Logo Design', 'Brand Guidelines', 'Print Design']
+        tags: ['Logo Design', 'Brand Guidelines', 'Print Design'],
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 4,
@@ -43,7 +45,8 @@ let portfolioItems = [
         description: 'High-converting landing page for software company',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
         tags: ['Next.js', 'Framer Motion', 'Analytics'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 6,
@@ -51,7 +54,8 @@ let portfolioItems = [
         category: 'brand',
         description: 'Complete brand identity for fine dining restaurant',
         image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop',
-        tags: ['Logo Design', 'Menu Design', 'Packaging']
+        tags: ['Logo Design', 'Menu Design', 'Packaging'],
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 7,
@@ -69,7 +73,8 @@ let portfolioItems = [
         description: 'Showcasing creative work with interactive elements',
         image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop',
         tags: ['HTML', 'CSS', 'JavaScript', 'Animations'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 9,
@@ -77,7 +82,8 @@ let portfolioItems = [
         category: 'brand',
         description: 'Innovative packaging for eco-friendly products',
         image: 'https://images.unsplash.com/photo-1583779654316-d48c3d735076?w=500&h=300&fit=crop',
-        tags: ['Packaging', 'Sustainability', '3D Mockup']
+        tags: ['Packaging', 'Sustainability', '3D Mockup'],
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 10,
@@ -95,7 +101,8 @@ let portfolioItems = [
         description: 'Modernizing an existing blog for better readability and SEO',
         image: 'https://images.unsplash.com/photo-1499750310107-5fcd61f2028d?w=500&h=300&fit=crop',
         tags: ['WordPress', 'Responsive', 'Content Strategy'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 12,
@@ -103,7 +110,8 @@ let portfolioItems = [
         category: 'brand',
         description: 'Comprehensive branding for a tech conference',
         image: 'https://images.unsplash.com/photo-1540575467063-1625d19d7f14?w=500&h=300&fit=crop',
-        tags: ['Event Design', 'Signage', 'Merchandise']
+        tags: ['Event Design', 'Signage', 'Merchandise'],
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 13,
@@ -121,7 +129,8 @@ let portfolioItems = [
         description: 'Designing intuitive interfaces for a new mobile application',
         image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&h=300&fit=crop',
         tags: ['Figma', 'Prototyping', 'User Research'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 15,
@@ -129,7 +138,8 @@ let portfolioItems = [
         category: 'brand',
         description: 'Creating captivating covers for best-selling novels',
         image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=300&fit=crop',
-        tags: ['Typography', 'Illustration', 'Print Ready']
+        tags: ['Typography', 'Illustration', 'Print Ready'],
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 16,
@@ -147,7 +157,8 @@ let portfolioItems = [
         description: 'Developing a user-friendly platform for e-learning',
         image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=300&fit=crop',
         tags: ['LMS', 'User Authentication', 'Payment Gateway'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 18,
@@ -155,7 +166,8 @@ let portfolioItems = [
         category: 'brand',
         description: 'Creating a unique visual identity for a new podcast',
         image: 'https://images.unsplash.com/photo-1534361960057-198807530616?w=500&h=300&fit=crop',
-        tags: ['Logo', 'Cover Art', 'Social Media Kit']
+        tags: ['Logo', 'Cover Art', 'Social Media Kit'],
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
         id: 19,
@@ -173,7 +185,8 @@ let portfolioItems = [
         description: 'Building a tailored customer relationship management system',
         image: 'https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=500&h=300&fit=crop',
         tags: ['Database Design', 'API Integration', 'User Interface'],
-        demo: 'https://example.com'
+        demo: 'https://example.com',
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     }
 ];
 
@@ -184,7 +197,8 @@ let testimonialItems = [
         company: 'TechStart Inc.',
         rating: 5,
         text: 'Faisal delivered exceptional video editing work that exceeded our expectations.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 2,
@@ -192,7 +206,8 @@ let testimonialItems = [
         company: 'Digital Solutions',
         rating: 5,
         text: 'Outstanding web development skills and professional communication.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 3,
@@ -200,7 +215,8 @@ let testimonialItems = [
         company: 'Creative Agency',
         rating: 5,
         text: 'Amazing branding work that perfectly captured our vision.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 4,
@@ -208,7 +224,8 @@ let testimonialItems = [
         company: 'Marketing Pro',
         rating: 5,
         text: 'Excellent video production quality and timely delivery.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 5,
@@ -216,7 +233,8 @@ let testimonialItems = [
         company: 'E-commerce Plus',
         rating: 5,
         text: 'Professional website development with great attention to detail.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 6,
@@ -224,7 +242,8 @@ let testimonialItems = [
         company: 'Brand Studio',
         rating: 5,
         text: 'Creative branding solutions that boosted our market presence.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 7,
@@ -232,7 +251,8 @@ let testimonialItems = [
         company: 'Media House',
         rating: 5,
         text: 'Top-notch video editing with cinematic quality.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 8,
@@ -240,7 +260,8 @@ let testimonialItems = [
         company: 'Tech Innovations',
         rating: 5,
         text: 'Responsive web design that works perfectly on all devices.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 9,
@@ -248,7 +269,8 @@ let testimonialItems = [
         company: 'Design Co.',
         rating: 5,
         text: 'Exceptional branding package with comprehensive guidelines.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face'
     },
     {
         id: 10,
@@ -256,7 +278,8 @@ let testimonialItems = [
         company: 'Video Productions',
         rating: 5,
         text: 'Professional video editing with quick turnaround time.',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face'
     }
 ];
 
@@ -285,6 +308,13 @@ function initializeCursor() {
     const cursorFollower = document.querySelector('.cursor-follower');
     
     if (!cursor || !cursorFollower) return;
+    
+    // Disable custom cursor on mobile devices
+    if (window.innerWidth <= 768) {
+        cursor.style.display = 'none';
+        cursorFollower.style.display = 'none';
+        return;
+    }
     
     let mouseX = 0, mouseY = 0;
     let followerX = 0, followerY = 0;
@@ -394,12 +424,14 @@ function initializeCounters() {
                 const target = parseInt(entry.target.dataset.count);
                 let current = 0;
                 const increment = target / 100;
+                const duration = 2000; // 2 seconds
+                const stepTime = duration / 100;
 
                 const updateCounter = () => {
                     if (current < target) {
                         current += increment;
                         entry.target.textContent = Math.ceil(current);
-                        requestAnimationFrame(updateCounter);
+                        setTimeout(updateCounter, stepTime);
                     } else {
                         entry.target.textContent = target;
                         observer.unobserve(entry.target);
@@ -423,7 +455,7 @@ function initializePortfolio() {
 }
 
 function renderPortfolio(limit = 3) {
-    const portfolioGrid = document.querySelector('.portfolio-grid');
+    const portfolioGrid = document.querySelector('#portfolioGrid');
     if (!portfolioGrid) return;
     
     const filteredItems = currentFilter === 'all' 
@@ -432,13 +464,10 @@ function renderPortfolio(limit = 3) {
     
     const itemsToShow = limit ? filteredItems.slice(0, limit) : filteredItems;
     
-    portfolioGrid.innerHTML = itemsToShow.map(item => `
-        <div class="portfolio-item" data-category="${item.category}">
+    portfolioGrid.innerHTML = itemsToShow.map((item, index) => `
+        <div class="portfolio-item" data-category="${item.category}" style="animation-delay: ${index * 0.1}s">
             <div class="portfolio-image">
-                ${item.video ? 
-                    `<iframe src="${item.video}" frameborder="0" allowfullscreen></iframe>` :
-                    `<img src="${item.image}" alt="${item.title}" loading="lazy">`
-                }
+                <iframe src="${item.video}" frameborder="0" allowfullscreen loading="lazy"></iframe>
                 <div class="portfolio-overlay">
                     <div class="portfolio-content">
                         <h3>${item.title}</h3>
@@ -446,7 +475,7 @@ function renderPortfolio(limit = 3) {
                         <div class="portfolio-tags">
                             ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                         </div>
-                        ${item.demo ? `<a href="${item.demo}" class="btn btn-primary" target="_blank">View Demo</a>` : ''}
+                        ${item.demo ? `<a href="${item.demo}" class="btn btn-primary btn-sm" target="_blank">View Demo</a>` : ''}
                     </div>
                 </div>
             </div>
@@ -454,7 +483,7 @@ function renderPortfolio(limit = 3) {
     `).join('');
 
     // Update expand button visibility and text
-    const expandBtn = document.querySelector('.portfolio-expand-btn');
+    const expandBtn = document.querySelector('#portfolioExpandBtn');
     if (expandBtn) {
         if (filteredItems.length <= limit) {
             expandBtn.style.display = 'none';
@@ -465,21 +494,22 @@ function renderPortfolio(limit = 3) {
             
             if (portfolioExpanded) {
                 btnText.textContent = 'Show Less Projects';
-                btnIcon.className = 'fas fa-chevron-up btn-icon';
+                btnIcon.style.transform = 'rotate(180deg)';
             } else {
                 btnText.textContent = 'Show More Projects';
-                btnIcon.className = 'fas fa-chevron-down btn-icon';
+                btnIcon.style.transform = 'rotate(0deg)';
             }
         }
     }
 }
 
 function setupPortfolioFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(btn => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Update active filter
-            filterButtons.forEach(b => b.classList.remove('active'));
+            filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
             // Update current filter
@@ -493,7 +523,8 @@ function setupPortfolioFilters() {
 }
 
 function setupPortfolioExpand() {
-    const expandBtn = document.querySelector('.portfolio-expand-btn');
+    const expandBtn = document.querySelector('#portfolioExpandBtn');
+    
     if (expandBtn) {
         expandBtn.addEventListener('click', () => {
             portfolioExpanded = !portfolioExpanded;
@@ -514,30 +545,34 @@ function initializeTestimonials() {
 }
 
 function renderTestimonials(limit = 3) {
-    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    const testimonialsGrid = document.querySelector('#testimonialsGrid');
     if (!testimonialsGrid) return;
-
+    
     const itemsToShow = limit ? testimonialItems.slice(0, limit) : testimonialItems;
-
-    testimonialsGrid.innerHTML = itemsToShow.map(item => `
-        <div class="testimonial-card glass-card">
-            <div class="testimonial-video-container">
-                <iframe src="${item.video}" frameborder="0" allowfullscreen></iframe>
+    
+    testimonialsGrid.innerHTML = itemsToShow.map((item, index) => `
+        <div class="testimonial-item" style="animation-delay: ${index * 0.1}s">
+            <div class="testimonial-video">
+                <iframe src="${item.video}" frameborder="0" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="testimonial-content">
-                <div class="stars">
-                    ${'<i class="fas fa-star"></i>'.repeat(item.rating)}
+                <div class="testimonial-rating">
+                    ${Array(item.rating).fill('<i class="fas fa-star"></i>').join('')}
                 </div>
                 <p class="testimonial-text">"${item.text}"</p>
                 <div class="testimonial-author">
-                    <h4 class="author-name">${item.name}</h4>
-                    <p class="author-company">${item.company}</p>
+                    <img src="${item.avatar}" alt="${item.name}" class="author-avatar">
+                    <div class="author-info">
+                        <h4 class="author-name">${item.name}</h4>
+                        <p class="author-company">${item.company}</p>
+                    </div>
                 </div>
             </div>
         </div>
     `).join('');
 
-    const expandBtn = document.querySelector('.testimonials-expand-btn');
+    // Update expand button visibility and text
+    const expandBtn = document.querySelector('#testimonialsExpandBtn');
     if (expandBtn) {
         if (testimonialItems.length <= limit) {
             expandBtn.style.display = 'none';
@@ -548,17 +583,18 @@ function renderTestimonials(limit = 3) {
             
             if (testimonialsExpanded) {
                 btnText.textContent = 'Show Less Testimonials';
-                btnIcon.className = 'fas fa-chevron-up btn-icon';
+                btnIcon.style.transform = 'rotate(180deg)';
             } else {
                 btnText.textContent = 'Show More Testimonials';
-                btnIcon.className = 'fas fa-chevron-down btn-icon';
+                btnIcon.style.transform = 'rotate(0deg)';
             }
         }
     }
 }
 
 function setupTestimonialsExpand() {
-    const expandBtn = document.querySelector('.testimonials-expand-btn');
+    const expandBtn = document.querySelector('#testimonialsExpandBtn');
+    
     if (expandBtn) {
         expandBtn.addEventListener('click', () => {
             testimonialsExpanded = !testimonialsExpanded;
@@ -574,177 +610,149 @@ function setupTestimonialsExpand() {
 
 // ===== SKILLS =====
 function initializeSkills() {
+    initializeSkillBars();
+    initializeSkillsChart();
+}
+
+function initializeSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
-    const radarChart = document.querySelector('#skillsRadarChart');
-    
-    // Animate skill bars when they come into view
     const observerOptions = {
         threshold: 0.5
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const skillBar = entry.target;
-                const percentage = skillBar.dataset.width;
-                const progressBar = skillBar.querySelector('.progress-bar');
+                const progressBar = entry.target;
+                const width = progressBar.dataset.width;
                 
-                if (progressBar) {
-                    setTimeout(() => {
-                        progressBar.style.width = percentage + '%';
-                    }, 200);
-                }
+                setTimeout(() => {
+                    progressBar.style.width = width + '%';
+                }, 200);
                 
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    
-    skillBars.forEach(skillBar => {
-        observer.observe(skillBar);
+
+    skillBars.forEach(bar => {
+        observer.observe(bar);
     });
-    
-    // Initialize radar chart if canvas exists
-    if (radarChart) {
-        initializeRadarChart();
-    }
 }
 
-function initializeRadarChart() {
-    const canvas = document.getElementById('skillsRadarChart');
+function initializeSkillsChart() {
+    const canvas = document.getElementById('skillsChart');
     if (!canvas) return;
-    
+
     const ctx = canvas.getContext('2d');
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
-    const radius = Math.min(centerX, centerY) - 40;
     
-    const skills = [
-        { name: 'Video Editing', value: 98 },
-        { name: 'Web Design', value: 95 },
-        { name: 'Branding', value: 90 },
-        { name: 'Motion Graphics', value: 85 },
-        { name: 'UI/UX', value: 88 },
-        { name: 'Photography', value: 80 }
-    ];
-    
-    const angleStep = (Math.PI * 2) / skills.length;
-    
-    // Clear canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // Draw grid lines
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-    ctx.lineWidth = 1;
-    
-    for (let i = 1; i <= 5; i++) {
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, (radius / 5) * i, 0, Math.PI * 2);
-        ctx.stroke();
+    // Wait for Chart.js to load
+    if (typeof Chart === 'undefined') {
+        setTimeout(initializeSkillsChart, 100);
+        return;
     }
-    
-    // Draw axis lines
-    for (let i = 0; i < skills.length; i++) {
-        const angle = i * angleStep - Math.PI / 2;
-        const x = centerX + Math.cos(angle) * radius;
-        const y = centerY + Math.sin(angle) * radius;
-        
-        ctx.beginPath();
-        ctx.moveTo(centerX, centerY);
-        ctx.lineTo(x, y);
-        ctx.stroke();
-    }
-    
-    // Draw skill data
-    ctx.fillStyle = 'rgba(0, 212, 255, 0.3)';
-    ctx.strokeStyle = '#00D4FF';
-    ctx.lineWidth = 2;
-    
-    ctx.beginPath();
-    for (let i = 0; i < skills.length; i++) {
-        const angle = i * angleStep - Math.PI / 2;
-        const value = (skills[i].value / 100) * radius;
-        const x = centerX + Math.cos(angle) * value;
-        const y = centerY + Math.sin(angle) * value;
-        
-        if (i === 0) {
-            ctx.moveTo(x, y);
-        } else {
-            ctx.lineTo(x, y);
+
+    const skillsChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Video Editing', 'Motion Graphics', 'Web Development', 'UI/UX Design', 'Brand Design', 'Color Grading'],
+            datasets: [{
+                label: 'Skills',
+                data: [98, 95, 92, 88, 90, 96],
+                backgroundColor: 'rgba(0, 212, 255, 0.2)',
+                borderColor: '#00D4FF',
+                borderWidth: 2,
+                pointBackgroundColor: '#00D4FF',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        display: false
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    angleLines: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    pointLabels: {
+                        color: '#fff',
+                        font: {
+                            size: 12
+                        }
+                    }
+                }
+            },
+            animation: {
+                duration: 2000,
+                easing: 'easeInOutQuart'
+            }
         }
-    }
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
-    
-    // Draw skill points
-    ctx.fillStyle = '#00D4FF';
-    for (let i = 0; i < skills.length; i++) {
-        const angle = i * angleStep - Math.PI / 2;
-        const value = (skills[i].value / 100) * radius;
-        const x = centerX + Math.cos(angle) * value;
-        const y = centerY + Math.sin(angle) * value;
-        
-        ctx.beginPath();
-        ctx.arc(x, y, 4, 0, Math.PI * 2);
-        ctx.fill();
-    }
-    
-    // Draw skill labels
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = '12px Inter';
-    ctx.textAlign = 'center';
-    
-    for (let i = 0; i < skills.length; i++) {
-        const angle = i * angleStep - Math.PI / 2;
-        const labelRadius = radius + 20;
-        const x = centerX + Math.cos(angle) * labelRadius;
-        const y = centerY + Math.sin(angle) * labelRadius;
-        
-        ctx.fillText(skills[i].name, x, y);
-    }
+    });
+
+    // Animate chart when it comes into view
+    const chartObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillsChart.update();
+                chartObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    chartObserver.observe(canvas);
 }
 
 // ===== CONTACT FORM =====
 function initializeContactForm() {
-    const contactForm = document.querySelector('.contact-form');
-    if (!contactForm) return;
+    const form = document.querySelector('#contactForm');
     
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Simulate form submission
-        const submitBtn = contactForm.querySelector('.btn-primary');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            submitBtn.textContent = 'Message Sent!';
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.querySelector('.btn-text').textContent;
+            
+            submitBtn.disabled = true;
+            submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+            
             setTimeout(() => {
-                submitBtn.textContent = originalText;
+                alert('Thank you for your message! I will get back to you soon.');
+                form.reset();
                 submitBtn.disabled = false;
-                contactForm.reset();
+                submitBtn.querySelector('.btn-text').textContent = originalText;
             }, 2000);
-        }, 1500);
-    });
+        });
+    }
 }
 
 // ===== PARTICLES =====
 function initializeParticles() {
-    const particleContainer = document.querySelector('.particle-network');
-    if (!particleContainer) return;
-    
-    const particles = [];
-    const particleCount = 50;
-    
+    const particleNetwork = document.querySelector('.particle-network');
+    if (!particleNetwork) return;
+
     // Create particles
-    for (let i = 0; i < particleCount; i++) {
+    for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.cssText = `
@@ -753,104 +761,58 @@ function initializeParticles() {
             height: 2px;
             background: rgba(0, 212, 255, 0.5);
             border-radius: 50%;
-            pointer-events: none;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: particleFloat ${5 + Math.random() * 10}s infinite linear;
+            animation-delay: ${Math.random() * 5}s;
         `;
-        
-        particleContainer.appendChild(particle);
-        
-        particles.push({
-            element: particle,
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5
-        });
+        particleNetwork.appendChild(particle);
     }
-    
-    // Animate particles
-    function animateParticles() {
-        particles.forEach(particle => {
-            particle.x += particle.vx;
-            particle.y += particle.vy;
-            
-            // Wrap around screen
-            if (particle.x < 0) particle.x = window.innerWidth;
-            if (particle.x > window.innerWidth) particle.x = 0;
-            if (particle.y < 0) particle.y = window.innerHeight;
-            if (particle.y > window.innerHeight) particle.y = 0;
-            
-            particle.element.style.left = particle.x + 'px';
-            particle.element.style.top = particle.y + 'px';
-        });
-        
-        requestAnimationFrame(animateParticles);
-    }
-    
-    animateParticles();
+
+    // Add particle animation CSS
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes particleFloat {
+            0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(${Math.random() * 200 - 100}px); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // ===== SCROLL EFFECTS =====
 function initializeScrollEffects() {
-    let ticking = false;
-    
-    function updateScrollEffects() {
+    // Parallax effect for hero section
+    window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        // Parallax effect for hero background
         const heroVideo = document.querySelector('.hero-video');
+        
         if (heroVideo) {
-            heroVideo.style.transform = `translateY(${rate}px)`;
-        }
-        
-        ticking = false;
-    }
-    
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(updateScrollEffects);
-            ticking = true;
-        }
-    }
-    
-    window.addEventListener('scroll', requestTick);
-}
-
-// ===== MAGNETIC BUTTONS =====
-document.addEventListener('mousemove', (e) => {
-    const magneticElements = document.querySelectorAll('.magnetic');
-    
-    magneticElements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        const distance = Math.sqrt(x * x + y * y);
-        
-        if (distance < 100) {
-            const strength = (100 - distance) / 100;
-            const moveX = x * strength * 0.3;
-            const moveY = y * strength * 0.3;
-            
-            element.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        } else {
-            element.style.transform = 'translate(0, 0)';
+            heroVideo.style.transform = `translateY(${scrolled * 0.5}px)`;
         }
     });
-});
 
-// ===== MOBILE OPTIMIZATIONS =====
-if (window.innerWidth <= 768) {
-    // Disable custom cursor on mobile
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
-    if (cursor) cursor.style.display = 'none';
-    if (cursorFollower) cursorFollower.style.display = 'none';
-    
-    // Reduce particle count on mobile
-    const particleContainer = document.querySelector('.particle-network');
-    if (particleContainer) {
-        particleContainer.style.display = 'none';
-    }
+    // Smooth reveal animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 }
 
 // ===== UTILITY FUNCTIONS =====
@@ -866,12 +828,43 @@ function debounce(func, wait) {
     };
 }
 
-// ===== RESIZE HANDLER =====
+// ===== RESPONSIVE HANDLING =====
 window.addEventListener('resize', debounce(() => {
-    // Reinitialize radar chart on resize
-    const radarChart = document.querySelector('#skillsRadarChart');
-    if (radarChart) {
-        initializeRadarChart();
+    // Reinitialize cursor for mobile/desktop changes
+    if (window.innerWidth <= 768) {
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        if (cursor) cursor.style.display = 'none';
+        if (cursorFollower) cursorFollower.style.display = 'none';
+    } else {
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        if (cursor) cursor.style.display = 'block';
+        if (cursorFollower) cursorFollower.style.display = 'block';
     }
 }, 250));
+
+// ===== ERROR HANDLING =====
+window.addEventListener('error', (e) => {
+    console.error('JavaScript Error:', e.error);
+});
+
+// ===== PERFORMANCE OPTIMIZATION =====
+// Lazy load images
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
 
