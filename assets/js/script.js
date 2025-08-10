@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
     initializeParticles();
     initializeScrollEffects();
+    initializeCounters(); // Add counter initialization
 });
 
 // ===== CUSTOM CURSOR =====
