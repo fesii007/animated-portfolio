@@ -6,7 +6,6 @@ let isLoading = false;
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', function() {
-    initializeLoader();
     initializeCursor();
     initializeNavigation();
     initializeAnimations();
@@ -17,29 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeParticles();
     initializeScrollEffects();
 });
-
-// ===== PAGE LOADER =====
-function initializeLoader() {
-    const loader = document.querySelector('.page-loader');
-    const loaderBar = document.querySelector('.loader-bar');
-    const loaderPercentage = document.querySelector('.loader-percentage');
-    
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 15;
-        if (progress > 100) progress = 100;
-        
-        loaderBar.style.width = progress + '%';
-        loaderPercentage.textContent = Math.floor(progress) + '%';
-        
-        if (progress >= 100) {
-            clearInterval(interval);
-            loader.classList.add("loaded");
-            document.body.style.overflow = "visible";
-            initializeCounters();
-        }
-    }, 100);
-}
 
 // ===== CUSTOM CURSOR =====
 function initializeCursor() {
